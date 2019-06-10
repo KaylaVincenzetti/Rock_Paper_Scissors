@@ -1,0 +1,14 @@
+.jumbotron  {
+    background-color: hsl(261, 78%, 64%);
+    text-align: center;
+}
+
+body {
+    background-color: rgb(189, 173, 207);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#game {
+    background-color: rgb(189, 173, 207);
+}
