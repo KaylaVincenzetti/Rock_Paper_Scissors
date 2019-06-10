@@ -5,6 +5,11 @@ let wins = 0;
 let losses = 0;
 let ties = 0;
 
+let compSelectText = document.getElementById('comp');
+let userChoiceText = document.getElementById('user');
+let winsText = document.getElementById('win');
+let lossesText = document.getElementById('loss');
+let tiesText = document.getElementById('tie');
 //function to allow user to select letter 
 document.onkeyup = function(event) {
     let userChoice = event.key; 
@@ -20,13 +25,22 @@ if ((userChoice === "r" && compSelection === "s") || (userChoice === "s") && com
     wins++;
 } else if (userChoice === compSelection) {
     ties++
-} else {
+} else if ((userChoice === "r" && compSelection === "p") || (userChoice === "s") && compSelection === "r" || (userChoice === "p" && compSelection === "s")) {
     losses++
+} else {
+    alert("You chose an incorrect key, please select r,p or s!")
 }
     console.log(wins);
     console.log(ties);
     console.log(losses);
+
+compSelectText.textContent = "Computer Chose: " + compSelection;
+userChoiceText.textContent = "User Chose: " + userChoice;
+winsText.textContent = "Wins: " + wins;
+lossesText.textContent = "Losses: " + losses;
+tiesText.textContent = "Ties: " + ties;
 }
+
 
 
 
